@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaShoppingCart } from "react-icons/fa";
 
-const Nav = styled.nav`
+const Container = styled.nav`
   height: 3rem;
   background-color: var(--blue-500);
   color: #fff;
@@ -43,7 +43,7 @@ const Button = styled.button`
 
 export default function Navbar() {
   return (
-    <Nav>
+    <Container>
       <a href="">
         MKS
         <span>Sistemas</span>
@@ -52,6 +52,6 @@ export default function Navbar() {
         <FaShoppingCart />
         0
       </Button>
-    </Nav>
+    </Container>
   );
 }
