@@ -1,5 +1,20 @@
 import styled from "styled-components";
-import { FaShoppingCart } from "react-icons/fa";
+import Button from "./Button";
+
+export default function Navbar({items}) {
+  return (
+    <Container>
+      <a href="">
+        MKS
+        <span>Sistemas</span>
+      </a>
+      <Button 
+      handler={()=>{}} 
+      cartCounter={items}
+      />
+    </Container>
+  );
+}
 
 const Container = styled.nav`
   height: 3rem;
@@ -25,33 +40,3 @@ const Container = styled.nav`
     }
   }
 `;
-
-const Button = styled.button`
-  width: fit-content;
-  background-color: var(--white);
-  color: var(--black);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  justify-self: end;
-
-  svg {
-    margin-right: 0.5rem;
-  }
-`;
-
-export default function Navbar() {
-  return (
-    <Container>
-      <a href="">
-        MKS
-        <span>Sistemas</span>
-      </a>
-      <Button>
-        <FaShoppingCart />
-        0
-      </Button>
-    </Container>
-  );
-}
